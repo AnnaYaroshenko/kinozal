@@ -9,8 +9,62 @@
 .vertical-slider {
   border-radius: 4px;
   overflow: hidden; // чтобы картинка не скрывала закругленные углы
-  
+
   img {
     width: 100%;
+  }
+}
+
+.top-films {
+  .panel-body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .list-group {
+    margin-bottom: 0;
+  }
+
+  .badge {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+
+  }
+
+  a {
+     
+      display: block;
+      padding: 10px 40px 10px $gap;
+  }
+
+  &-item {
+    border-top: 1px solid $color-gray;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    padding: 0;
+
+    &:first-of-type {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+      border-radius: 0;
+    }
+
+    &:hover {
+        background-color: $color-accent;
+
+        a {
+            color: $color-light;
+        }
+
+        .badge {
+            background-color: $color-dark;
+        }
+    }
   }
 }
