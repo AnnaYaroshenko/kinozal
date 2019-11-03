@@ -54,10 +54,44 @@
 }
 
 .navbar-header {
-    text-align: center;
+  text-align: center;
 }
 
 .navbar-toggle {
-    float: none;
-    margin-right: 0;
+  float: none;
+  margin-right: 0;
+}
+
+.panel {
+  border: none;
+  background-color: lighten($color-gray, 8%);
+  margin-bottom: $gap * 2; // отступы по вертикали панелей
+
+  // .left-sidebar & {
+  //   &:last-of-type() {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  &-title {
+    font-style: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  &-body {
+    border: 1px solid $color-gray;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &-info > .panel-heading {
+    color: $color-light;
+    background-color: $color-accent;
+    border: none;
+  }
+}
+
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  font-size: 0.875rem;
 }

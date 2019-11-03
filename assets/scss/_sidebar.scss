@@ -1,0 +1,16 @@
+.left-sidebar {
+  margin-bottom: $gap * 4; // 60px
+
+  .panel:last-of-type() {
+    margin-bottom: 0;
+  }
+}
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden; // чтобы картинка не скрывала закругленные углы
+  
+  img {
+    width: 100%;
+  }
+}
