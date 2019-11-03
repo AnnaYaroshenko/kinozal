@@ -1,0 +1,63 @@
+// здесь изменения стандартных классов bootstrap, т.н. темизация
+
+.navbar-inverse {
+  background-color: darken($color-dark, 4%);
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: saturate(darken($color-primary, 14%), 15%);
+
+  &:focus,
+  &:hover {
+    background-color: desaturate(lighten($color-primary, 15%), 40%);
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  transition: background-color 0.5s;
+
+  @include sm-min {
+    border-radius: 4px;
+  }
+
+  @include sm {
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary;
+  }
+}
+
+.navbar-left {
+  @include sm {
+    margin-bottom: 0;
+  }
+  @include sm-min {
+    > li {
+      margin: 5px 5px 5px 0;
+    }
+  }
+}
+
+.navbar-right {
+  @include sm {
+    margin-top: 0;
+  }
+  @include sm-min {
+    > li {
+      margin: 5px 0 5px 5px;
+    }
+  }
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.navbar-toggle {
+    float: none;
+    margin-right: 0;
+}
