@@ -18,16 +18,21 @@ a {
 }
 
 h1 {
-    font-family: $font-header;
+  font-family: $font-header;
 }
 
 h2 {
-    font-family: $font-header;
+  font-family: $font-header;
 }
 
-// h3 {
-
-// }
+h3 {
+  @include xs-min {
+    font-size: 1.5rem;
+  }
+  @include xs {
+    font-size: 1.25rem;
+  }
+}
 
 // section {
 

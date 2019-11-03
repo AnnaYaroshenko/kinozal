@@ -41,7 +41,7 @@
 }
 
 .panel-title {
-  font-style: 1.2rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
 }
 
@@ -119,6 +119,10 @@ h2 {
   letter-spacing: 0.2em;
 }
 
+.main .site-search {
+  margin: -15px 0 45px;
+}
+
 .left-sidebar {
   margin-bottom: 60px;
 }
@@ -136,6 +140,62 @@ h2 {
   width: 100%;
 }
 
+.site-news-item {
+  clear: both;
+  position: relative;
+}
+
+.site-news-item:hover .site-news-item__title a {
+  color: #df8a13;
+}
+
+.site-news-item:hover .site-news-item__image {
+  border-color: #df8a13;
+  background-color: #df8a13;
+}
+
+.site-news-item:not(:last-child) {
+  min-height: 85px;
+  margin-bottom: 15px;
+}
+
+.site-news-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: calc(100% - 85px);
+  height: 1px;
+  background-color: #dddddd;
+}
+
+.site-news-item__image {
+  float: left;
+  width: 75px;
+  margin: 0 10px 10px 0;
+}
+
+.site-news-item__image img {
+  width: 100%;
+}
+
+.site-news-item__date {
+  text-align: right;
+  color: #909090;
+  font-size: 0.8rem;
+}
+
+.site-news-item__title {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
 .top-films .panel-body {
   padding-right: 0;
   padding-left: 0;
@@ -143,6 +203,11 @@ h2 {
 
 .top-films .list-group {
   margin-bottom: 0;
+}
+
+.top-films .list-group-item {
+  margin-right: -1px;
+  margin-left: -1px;
 }
 
 .top-films .badge {
@@ -157,6 +222,7 @@ h2 {
 }
 
 .top-films-item {
+  position: relative;
   border-top: 1px solid #dddddd;
   border-right: none;
   border-left: none;
@@ -174,19 +240,22 @@ h2 {
   border-radius: 0;
 }
 
-.top-films-item:hover {
+.top-films-item:hover, .top-films-item:focus {
   background-color: #df8a13;
 }
 
-.top-films-item:hover a {
+.top-films-item:hover a, .top-films-item:focus a {
   color: #ffffff;
 }
 
-.top-films-item:hover .badge {
+.top-films-item:hover .badge, .top-films-item:focus .badge {
   background-color: #232323;
 }
 
 @media (min-width: 576px) {
+  h3 {
+    font-size: 1.5rem;
+  }
   .header-logo__title {
     font-size: 3.5rem;
     letter-spacing: 0.33em;
@@ -218,6 +287,9 @@ h2 {
 }
 
 @media (max-width: 575.8px) {
+  h3 {
+    font-size: 1.25rem;
+  }
   .header-logo__title {
     font-size: 2.5rem;
     letter-spacing: 0.2em;

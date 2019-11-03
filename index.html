@@ -76,11 +76,55 @@
     <div class="row">
       <!-- col-lg-9 - приставка размерности -->
       <!-- push / pull меняем местами блоки -->
-      <main class="main           col-lg-9    col-lg-push-3  col-md-8  col-md-push-4">MAIN</main>
+      <main class="main           col-lg-9    col-lg-push-3  col-md-8  col-md-push-4">
+
+        <section class="site-search panel panel-info hidden-lg hidden-md">
+          <div class="panel-heading">
+            <h3 class="panel-title">Поиск</h3>
+          </div>
+          <div class="panel-body">
+            <!-- components/input group  -->
+            <form action="search">
+              <div class="input-group input-group-lg">
+                <input type="search" class="form-control" placeholder="Поиск по сайту">
+                <span class="input-group-btn">
+                  <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="user-login panel panel-info hidden-lg hidden-md">
+          <div class="panel-heading">
+            <h3 class="panel-title">Вход</h3>
+          </div>
+          <div class="panel-body">
+            <form action="login">
+              <div class="form-group">
+                <input type="text" class="form-control" name="" id="" placeholder="Логин">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="" id="" placeholder="Пароль">
+              </div>
+              <button class="btn btn-default btn-lg btn-block" type="submit">Вход</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="new-films">
+          <div class="row">
+            <!-- ToDo дописать -->
+            <!-- article.new-films-item.col-lg-3 -->
+          </div>
+        </section>
+      </main>
+
+      <!-- ---------левое меню сайта--------- -->
       <aside class="left-sidebar  col-lg-3    col-lg-pull-9  col-md-4  col-md-pull-8">
 
         <!-- нашли подходящую панель в бутстрап https://getbootstrap.com/docs/3.4/components/#panels -->
-        <div class="vertical-slider panel">
+        <div class="vertical-slider panel hiden-xs hidden-sm">
           <div id="vertical-carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -118,7 +162,7 @@
           </div>
         </div>
 
-        <div class="site-search panel panel-info">
+        <div class="site-search panel panel-info hiden-xs hidden-sm">
           <div class="panel-heading">
             <h3 class="panel-title">Поиск</h3>
           </div>
@@ -135,7 +179,7 @@
           </div>
         </div>
 
-        <div class="user-login panel panel-info">
+        <div class="user-login panel panel-info hiden-xs hidden-sm">
           <div class="panel-heading">
             <h3 class="panel-title">Вход</h3>
           </div>
@@ -157,7 +201,68 @@
             <h3 class="panel-title">Новости сайта</h3>
           </div>
           <div class="panel-body">
-            Panel content
+            <!-- .site-news-item>.site-news-item__image+.site-news-item__title+.site-news-item__date -->
+            <!-- bootstrap thumbnails -->
+            <div class="site-news-item">
+              <div class="site-news-item__image thumbnail">
+                <img src="assets/img/75x75.png" alt="news">
+              </div>
+              <div class="site-news-item__title">
+                <a href="#">Мы запустили новый сервис - КиноМонстр</a>
+              </div>
+              <div class="site-news-item__date">
+                5 декабря 2019
+              </div>
+            </div>
+
+            <div class="site-news-item">
+              <div class="site-news-item__image thumbnail">
+                <img src="assets/img/75x75.png" alt="news">
+              </div>
+              <div class="site-news-item__title">
+                <a href="#">На сайте добавлен новый функционал</a>
+              </div>
+              <div class="site-news-item__date">
+                6 декабря 2016
+              </div>
+            </div>
+
+            <div class="site-news-item">
+              <div class="site-news-item__image thumbnail">
+                <img src="assets/img/75x75.png" alt="news">
+              </div>
+              <div class="site-news-item__title">
+                <a href="#">Скорость скачивания фильмов увеличена</a>
+              </div>
+              <div class="site-news-item__date">
+                7 декабря 2016
+              </div>
+            </div>
+
+            <div class="site-news-item">
+              <div class="site-news-item__image thumbnail">
+                <img src="assets/img/75x75.png" alt="news">
+              </div>
+              <div class="site-news-item__title">
+                <a href="#">Оптимизирована производительность сервера</a>
+              </div>
+              <div class="site-news-item__date">
+                8 декабря 2019
+              </div>
+            </div>
+
+            <div class="site-news-item">
+              <div class="site-news-item__image thumbnail">
+                <img src="assets/img/75x75.png" alt="news">
+              </div>
+              <div class="site-news-item__title">
+                <a href="#">Количество пользователей перевалила за 10 000</a>
+              </div>
+              <div class="site-news-item__date">
+                9 декабря 2019
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -169,45 +274,45 @@
             <!-- ul.list-group>li.top-films-item.list-group-item*11>a[href=#]{Name }>span.badge{8.5} -->
             <ul class="list-group">
               <li class="top-films-item list-group-item">
-                <a href="#">Марсианин <span class="badge">8.5</span></a>
+                <a href="#">Марсианин <span class="badge">8.9</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Иллюзия обмана <span class="badge">8.5</span></a>
+                <a href="#">Иллюзия обмана 2<span class="badge">8.8</span></a>
               </li>
               <li class="top-films-item list-group-item">
                 <a href="#">Из машины <span class="badge">8.5</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Люси <span class="badge">8.2</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Выхода нет<span class="badge">8.0</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Стражи галактики<span class="badge">7.9</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Человек-муравей<span class="badge">7.7</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Месть от кутюр<span class="badge">7.5</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Люди Икс<span class="badge">7.4</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Занесло<span class="badge">7.3</span></a>
               </li>
               <li class="top-films-item list-group-item">
-                <a href="#">Name <span class="badge">8.5</span></a>
+                <a href="#">Дочь Бога<span class="badge">7.2</span></a>
               </li>
             </ul>
           </div>
         </div>
 
       </aside>
-    </div>
-  </div>
+    </sectiondiv>
+  </sectiondiv>
 
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
